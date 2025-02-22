@@ -1,41 +1,34 @@
-title: "穷.me"
-author: "文刀刘"
-description: "穷.me,qiong.me,文刀刘,一个博客树洞。本博客基于Jekyll进行书写。源自生活的点点滴滴和碎碎念。"
-permalink: /post/:year:month:day.html
-paginate: 5
-lang: "zh-cn"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
-
-# Layout
-
-show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-minimal: false             # use a dark header
-
-# Menu
-
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "README.md"}
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
-
+---
+title: 穷.me
+timezone: Asia/Shanghai
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: Cathay.Blog,文刀刘,一个博客树洞。本博客基于Jekyll进行书写。源自生活的点点滴滴和碎碎念。
+baseurl: ''
+url: https://qiong.me
+author:
+  name: 文刀刘
+  url: https://qiong.me/about/
+  email: 9125@88.com
+markdown: kramdown
+include:
+- _pages
+sass:
+  sass_dir: _sass
+  style: compressed
 plugins:
- - jekyll-feed
- - jekyll-paginate
- - jekyll-seo-tag
- - jekyll-sitemap
- 
+- jekyll-feed
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-sitemap
+permalink: "/post/:year:month:day.html"
+paginate: 5
 exclude:
 - Gemfile
 - Gemfile.lock
-- q.gemspec
+- muji.gemspec
